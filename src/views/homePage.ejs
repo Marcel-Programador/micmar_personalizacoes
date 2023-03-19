@@ -15,7 +15,9 @@
                     <span><strong>de </strong>R$:<%=prod.salePrice%> Por R$:<%=prod.specialPrice%></span>
 
                     <div class="home-produtos-image">
-                        <img class="h-produtos-image" src="<%=prod.img%>" alt="">
+                        <a href="/product/<%=prod.id%>">
+                            <img class="h-produtos-image" src="<%=prod.img%>" alt="">
+                        </a>
                     </div>
                 </div>
                 <% } %>

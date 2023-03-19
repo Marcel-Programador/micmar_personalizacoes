@@ -13,18 +13,9 @@ const ProductController = {
         const { id } = req.params;
         let pm = await ProductsModels.findAll({
             where: {
-              id: id
+              id: id,
             }
           });
-        // console.log(pm);
-        // const { id, category_opt_singular, category_opt_plural } = req.params;
-        // let co = await CategoryOptionsModels.findAll({
-        //   options: {
-        //       id: id,
-        //       category_opt_singular: category_opt_singular,
-        //       category_opt_plural: category_opt_plural
-        // }
-        // });
         return res.render("product", {title: "MICMAR | PAGINA DO PRODUTO", hcl, hca, ms, pm, co});
     }
 };

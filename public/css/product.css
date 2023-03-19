@@ -1,0 +1,25 @@
+/* Inicio Main */
+main {
+    padding: 5px 5px 5px 5px;
+}
+#container-home-produtos-product {
+    margin-top: 15px;
+    display: grid;
+    grid-template-columns: auto;
+    justify-content: space-evenly;
+    justify-items: center;
+    grid-gap: 20px;
+}
+.home-produtos-product {
+    width: 17vw;
+    height: 25rem;
+    background-color: rgb(70, 211, 42);
+    display: grid;
+    justify-items: center;
+    color: white;
+}
+.h-produtos-image-product {
+    max-width: 15.5vw;
+    max-height: 40vh;
+}
+/* Fim main */
