@@ -1,0 +1,69 @@
+<%- include('./partials/headLogo') %>
+    <main>
+        <section>
+            <h1>Excluir o Usuário</h1>
+
+            <form action="/delete/user/user/<%=userResult.id%>?_method=put" method="post" enctype="multipart/form-data">
+                <div class="Product-input">
+                    <label for="id">Id: </label><%= userResult.id %>
+                </div>
+                <div>
+                    <label class="form-label" for="firstName-id">Nome: </label><%=userResult.firstName%>
+                </div>
+                <div>
+                    <label class="form-label" for="lastName-id">Sobrenome: </label><%=userResult.lastName%>
+                </div>
+                <div>
+                    <label class="form-label" for="cpf-id">CPF: </label><%=userResult.cpf%>
+                </div>
+                <div>
+                    <label class="form-label" for="cnpj-id">CNPJ: </label><%=userResult.cnpj%>
+                </div>
+                <div>
+                    <label class="form-label" for="email-id">E-mail: </label><%=userResult.email%>
+                </div>
+                <div>
+                    <label class="form-label" for="telephone-id">Fone Fixo: </label><%=userResult.telephone%>
+                </div>
+                <div>
+                    <label class="form-label" for="mobilePhone-id">Celular: </label><%=userResult.mobilePhone%>
+                </div>
+                <div>
+                    <label class="form-label" for="professionalPhone-id">Fone trabalho: </label><%=userResult.professionalPhone%>
+                </div>
+                <div>
+                    <label class="form-label" for="birthDate-id">Data de nascimento: </label><%=userResult.birthDate%>
+                </div>
+                <div>
+                    <label class="form-label" for="genre-id">Gênero: </label><%=userResult.genre%>
+                </div>
+                <div>
+                    <label class="form-label" for="addressNumber-id">Rua e numero: </label><%=userResult.addressNumber%>
+                </div>
+                <div>
+                    <label class="form-label" for="district-id">Bairro: </label><%=userResult.district%>
+                </div>
+                <div>
+                    <label class="form-label" for="city-id">Cidade: </label><%=userResult.city%>
+                </div>
+                <div>
+                    <label class="form-label" for="state-id">Estado: </label><%=userResult.state%>
+                </div>
+                <div>
+                    <label class="form-label" for="País-id">País: </label><%=userResult.País%>
+                </div>
+                <div>
+                    <label class="form-label" for="zipCode-id">CEP: </label><%=userResult.zipCode%>
+                </div>
+                <div>
+                    <label class="form-label" for="password-id">Senha: </label><%=userResult.password%>
+                </div>
+                <div>
+                    <label class="form-label" for="img-id">Imagem :</label><%=userResult.img%>
+                </div>
+                <button type="submit" class="btn-btn-primary">Excluir</button>
+            </form>
+        </section>
+        <a href="/actionChange/user/userActionChange"><button type="submit" class="btn-btn-primary">Voltar</button></a>
+    </main>
+<%- include('./partials/footer') %>

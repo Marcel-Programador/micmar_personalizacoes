@@ -1,0 +1,106 @@
+<%- include('./partials/headLogo') %>
+    <main>
+        <section>
+            <h1>Escolha uma das ações</h1>
+                <% for(let users of user) { %>
+                <form>
+                    <div class="table-container">
+                        <table id="tbl-01">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th class="th-hide">Nome</th>
+                                    <th class="th-hide">Sobrenome</th>
+                                    <th class="th-hide">CPF</th>
+                                    <th class="th-hide">CNPJ</th>
+                                    <th class="th-hide">e-mail</th>
+                                    <th class="th-hide">Fone residencial</th>
+                                    <th class="th-hide">Celular</th>
+                                    <th class="th-hide">Fone empresa</th>
+                                    <th class="th-hide">Data de nascimento</th>
+                                    <th class="th-hide">Gênero</th>
+                                    <th class="th-hide">Rua e numero</th>
+                                    <th class="th-hide">Bairro</th>
+                                    <th class="th-hide">Cidade</th>
+                                    <th class="th-hide">Estado</th>
+                                    <th class="th-hide">País</th>
+                                    <th class="th-hide">CEP</th>
+                                    <th class="th-hide">Senha</th>
+                                    <th class="th-hide">Confirme a senha</th>
+                                    <th class="th-hide">Imagem</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td>
+                                        <%= users.id %>
+                                    </td>
+                                    <td class="th-hide">
+                                        <%= users.firstName %>
+                                    </td>
+                                    <td>
+                                        <%= users.lastName%>
+                                    </td>
+                                    <td>
+                                        <%= users.cpf %>
+                                    </td>
+                                    <td>
+                                        <%= users.cnpj %>
+                                    </td>
+                                    <td>
+                                        <%= users.email %>
+                                    </td>
+                                    <td>
+                                        <%= users.telephone %>
+                                    </td>
+                                    <td>
+                                        <%= users.mobilePhone %>
+                                    </td>
+                                    <td>
+                                        <%= users.professionalPhone %>
+                                    </td>
+                                    <td>
+                                        <%= users.birthDate %>
+                                    </td>
+                                    <td>
+                                        <%= users.genre %>
+                                    </td>
+                                    <td>
+                                        <%= users.addressNumber %>
+                                    </td>
+                                    <td>
+                                        <%= users.district %>
+                                    </td>
+                                    <td>
+                                        <%= users.city %>
+                                    </td>
+                                    <td>
+                                        <%= users.state %>
+                                    </td>
+                                    <td>
+                                        <%= users.country %>
+                                    </td>
+                                    <td>
+                                        <%= users.zipCode %>
+                                    </td>
+                                    <td>
+                                        <%= users.password %>
+                                    </td>
+                                    <td class="table-actions table-img">
+                                        <a href="/show/user/userActionChange/show/<%= users.id %>" class="display-visible"><img src="/img/view3.png" alt=""></a>
+                                        <a href="/edit/user/userActionChange/edit/<%= users.id %>"><img src="/img/edit.png"></a>
+                                        <a href="/delete/user/userActionChange/delete/<%= users.id %>"><img src="/img/cancel.png"></a>
+                                        <a onclick="'<%= users.id %>','<%= users.theme %>','<%= users.category %>','<%= users.mark %>','<%= users.type %>','<%= users.color %>','<%= users.quantity %>','<%= users.costPrice %>','<%= users.salePrice %>','<%= users.specialPrice %>','<%= users.description %>','<%= users.img %>','<%= users.addressNumber %>','<%= users.district %>','<%= users.city %>','<%= users.state %>','<%= users.country %>','<%= users.zipCode %>'"></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+                <% } %>
+            <a href="/adm/admPage/show"><button type="submit" class="btn-btn-primary">Voltar</button></a>
+        </section>
+    </main>
+<%- include('./partials/footer') %>

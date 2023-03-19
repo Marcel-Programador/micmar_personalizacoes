@@ -1,0 +1,70 @@
+<%- include('./partials/headLogo') %>
+    <main>
+        <section>
+            <h1>Excluir o Usuário</h1>
+            <% for(let user of userResult) { %>
+                <div class="Product-input">
+                    <label for="id">Id: </label><%= userResult.id %>
+                </div>
+                <div>
+                    <label class="form-label" for="firstName-id">Nome: </label><%=user.firstName%>
+                </div>
+                <div>
+                    <label class="form-label" for="lastName-id">Sobrenome: </label><%=user.lastName%>
+                </div>
+                <div>
+                    <label class="form-label" for="cpf-id">CPF: </label><%=user.cpf%>
+                </div>
+                <div>
+                    <label class="form-label" for="cnpj-id">CNPJ: </label><%=user.cnpj%>
+                </div>
+                <div>
+                    <label class="form-label" for="email-id">E-mail: </label><%=user.email%>
+                </div>
+                <div>
+                    <label class="form-label" for="telephone-id">Fone Fixo: </label><%=user.telephone%>
+                </div>
+                <div>
+                    <label class="form-label" for="mobilePhone-id">Celular: </label><%=user.mobilePhone%>
+                </div>
+                <div>
+                    <label class="form-label" for="professionalPhone-id">Fone trabalho: </label><%=user.professionalPhone%>
+                </div>
+                <div>
+                    <label class="form-label" for="birthDate-id">Data de nascimento: </label><%=user.birthDate%>
+                </div>
+                <div>
+                    <label class="form-label" for="genre-id">Gênero: </label><%=user.genre%>
+                </div>
+                <div>
+                    <label class="form-label" for="addressNumber-id">Rua e numero: </label><%=user.addressNumber%>
+                </div>
+                <div>
+                    <label class="form-label" for="district-id">Bairro: </label><%=user.district%>
+                </div>
+                <div>
+                    <label class="form-label" for="city-id">Cidade: </label><%=user.city%>
+                </div>
+                <div>
+                    <label class="form-label" for="state-id">Estado: </label><%=user.state%>
+                </div>
+                <div>
+                    <label class="form-label" for="País-id">País: </label><%=user.País%>
+                </div>
+                <div>
+                    <label class="form-label" for="zipCode-id">CEP: </label><%=user.zipCode%>
+                </div>
+                <div>
+                    <label class="form-label" for="password-id">Senha: </label><%=user.password%>
+                </div>
+                <div>
+                    <label class="form-label" for="img-id">Imagem :</label><%=user.img%>
+                </div>
+                <div class="home-produtos-image">
+                    <img class="h-produtos-image" src="<%=user.img%>" alt="300">
+                </div>
+            <% } %>
+            <a href="/actionChange/user/userActionChange"><button type="submit" class="btn-btn-primary">Voltar</button></a>
+        </section>
+    </main>
+<%- include('./partials/footer') %>

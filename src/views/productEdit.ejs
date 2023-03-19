@@ -1,0 +1,59 @@
+<%- include('./partials/headLogo') %>
+    <main>
+        <section>
+            <h1>Edite e atualize Produtos</h1>
+
+            <form action="/edit/prod/product/<%=productResult.id%>?_method=put" method="post" enctype="multipart/form-data">
+                <div class="Product-input">
+                    <label for="id">Id: </label><%= productResult.id %>
+                </div>
+                <div>
+                    <label class="form-label" for="theme-id">Tema</label>
+                    <input value="<%=productResult.theme%>" type="text" class="form-control" name="theme" id="theme-id" placeholder="Tema ex. 'Dia das Mães'">
+                </div>
+                <div>
+                    <label class="form-label" for="category-id">Categoria</label>
+                    <input value="<%=productResult.category%>" type="text" class="form-control" name="category" id="category-id" placeholder="Categoria ex. 'Caneca'">
+                </div>
+                <div>
+                    <label class="form-label" for="mark-id">Marca</label>
+                    <input value="<%=productResult.mark%>" type="text" class="form-control" name="mark" id="mark-id" placeholder="Marca ex. 'Live'">
+                </div>
+                <div>
+                    <label class="form-label" for="type-id">Tipo</label>
+                    <input value="<%=productResult.type%>" type="text" class="form-control" name="type" id="type-id" placeholder="Tipo ex. 'Porcelana'">
+                </div>
+                <div>
+                    <label class="form-label" for="color-id">Cor</label>
+                    <input value="<%=productResult.color%>" type="text" class="form-control" name="color" id="color-id" placeholder="Cor ex. 'Azul'">
+                </div>
+                <div>
+                    <label class="form-label" for="quantity-id">Quantidade</label>
+                    <input value="<%=productResult.quantity%>" type="number" class="form-control" name="quantity" id="quantity-id" placeholder="Quantidade ex. '300'">
+                </div>
+                <div>
+                    <label class="form-label" for="costPrice-id">Preço de custo</label>
+                    <input value="<%=productResult.costPrice%>" type="text" class="form-control" name="costPrice" id="costPrice-id" placeholder="Preço de custo ex. '6.00'">
+                </div>
+                <div>
+                    <label class="form-label" for="salePrice-id">Preço de venda</label>
+                    <input value="<%=productResult.salePrice%>" type="text" class="form-control" name="salePrice" id="salePrice-id" placeholder="Preço de venda ex. '25.00'">
+                </div>
+                <div>
+                    <label class="form-label" for="specialPrice-id">Preço promocional</label>
+                    <input value="<%=productResult.specialPrice%>" type="text" class="form-control" name="specialPrice" id="specialPrice-id" placeholder="Preço promocional ex. 'Live'">
+                </div>
+                <div>
+                    <label class="form-label" for="description-id">Descrição</label>
+                    <input value="<%=productResult.description%>" type="text" class="form-control" name="description" id="description-id" placeholder="Descrição ex. 'Caneca 350ml, etc...'">
+                </div>
+                <div>
+                    <label class="form-label" for="img-id">Imagem</label>
+                    <input type="file" accept="image" class="form-control" name="avatar" id="img-id">
+                </div>
+                <button type="submit" class="btn-btn-primary">Atualizar</button>
+            </form>
+            <a href="/actionChange/prod/productActionChange"><button type="submit" class="btn-btn-primary">Voltar</button></a>
+        </section>
+    </main>
+<%- include('./partials/footer') %>

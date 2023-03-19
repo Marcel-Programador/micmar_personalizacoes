@@ -1,0 +1,22 @@
+<%- include('./partials/headLogo') %>
+    <main>
+        <section>
+            <h1>Mostrando categoria selecionada</h1>
+            <% for(let categ of categoryResult) { %> 
+                <div class="Product-input">
+                    <label for="id">Id:</label>
+                    <td class="th-hide">
+                        <%= categ.id %>
+                    </td>
+                </div>
+                <div>
+                    <label class="form-label" for="category_opt_singular-id">Categoria:</label>
+                    <td class="th-hide">
+                        <%= categ.category_opt_singular %>
+                    </td>
+                </div>
+            <% } %>
+            <a href="/actionChange/cat/categoryActionChange"><button type="submit" class="btn-btn-primary">Voltar</button></a>
+        </section>
+    </main>
+<%- include('./partials/footer') %>

@@ -1,0 +1,48 @@
+<%- include('./partials/headLogo') %>
+    <main>
+        <section>
+            <h1>Excluir o Produto</h1>
+
+            <form action="/delete/prod/product/<%=productResult.id%>?_method=put" method="post" enctype="multipart/form-data">
+                <div class="Product-input">
+                    <label for="id">Id: </label><%= productResult.id %>
+                </div>
+                <div>
+                    <label class="form-label" for="theme-id">Tema: </label><%=productResult.theme%>
+                </div>
+                <div>
+                    <label class="form-label" for="category-id">Categoria: </label><%=productResult.category%>
+                </div>
+                <div>
+                    <label class="form-label" for="mark-id">Marca: </label><%=productResult.mark%>
+                </div>
+                <div>
+                    <label class="form-label" for="type-id">Tipo: </label><%=productResult.type%>
+                </div>
+                <div>
+                    <label class="form-label" for="color-id">Cor: </label><%=productResult.color%>
+                </div>
+                <div>
+                    <label class="form-label" for="quantity-id">Quantidade: </label><%=productResult.quantity%>
+                </div>
+                <div>
+                    <label class="form-label" for="costPrice-id">Preço de custo: </label><%=productResult.costPrice%>
+                </div>
+                <div>
+                    <label class="form-label" for="salePrice-id">Preço de venda: </label><%=productResult.salePrice%>
+                </div>
+                <div>
+                    <label class="form-label" for="specialPrice-id">Preço promocional: </label><%=productResult.specialPrice%>
+                </div>
+                <div>
+                    <label class="form-label" for="description-id">Descrição: </label><%=productResult.description%>
+                </div>
+                <div>
+                    <label class="form-label" for="img-id">Imagem: </label><%=productResult.img%>
+                </div>
+                <button type="submit" class="btn-btn-primary">Excluir</button>
+            </form>
+            <a href="/actionChange/prod/productActionChange"><button type="submit" class="btn-btn-primary">Voltar</button></a>
+        </section>
+    </main>
+<%- include('./partials/footer') %>

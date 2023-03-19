@@ -1,0 +1,26 @@
+<%- include('./partials/head') %>
+    <main>
+        <section>
+            <% for(let title of ms) { %>
+            <span>
+                <h1>
+                    <b><%=title.title_impact_2%></b>
+                </h1>
+            </span>
+            <div id="container-home-produtos">
+                <% for(let prod of pm) { %>
+                <div class="home-produtos">
+                    <h3><%=prod.category%></h3>
+                    <h2><%=title.title_impact_3%></h2>
+                    <span><strong>de </strong>R$:<%=prod.salePrice%> Por R$:<%=prod.specialPrice%></span>
+
+                    <div class="home-produtos-image">
+                        <img class="h-produtos-image" src="<%=prod.img%>" alt="">
+                    </div>
+                </div>
+                <% } %>
+            </div>
+            <% } %>
+        </section>
+    </main>
+<%- include('./partials/footer') %>

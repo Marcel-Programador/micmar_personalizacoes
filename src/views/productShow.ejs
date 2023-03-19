@@ -1,0 +1,49 @@
+<%- include('./partials/headLogo') %>
+    <main>
+        <section>
+            <h1>Mostrando o produto selecionado</h1>
+            <% for(let prod of productResult) { %>
+                <div class="Product-input">
+                    <label for="id">Id: </label><%= prod.id %>
+                </div>
+                <div>
+                    <label class="form-label" for="theme-id">Tema: </label><%=prod.theme%>
+                </div>
+                <div>
+                    <label class="form-label" for="category-id">Categoria: </label><%=prod.category%>
+                </div>
+                <div>
+                    <label class="form-label" for="mark-id">Marca: </label><%=prod.mark%>
+                </div>
+                <div>
+                    <label class="form-label" for="type-id">Tipo: </label><%=prod.type%>
+                </div>
+                <div>
+                    <label class="form-label" for="color-id">Cor: </label><%=prod.color%>
+                </div>
+                <div>
+                    <label class="form-label" for="quantity-id">Quantidade: </label><%=prod.quantity%>
+                </div>
+                <div>
+                    <label class="form-label" for="costPrice-id">Preço de custo: </label><%=prod.costPrice%>
+                </div>
+                <div>
+                    <label class="form-label" for="salePrice-id">Preço de venda: </label><%=prod.salePrice%>
+                </div>
+                <div>
+                    <label class="form-label" for="specialPrice-id">Preço promocional: </label><%=prod.specialPrice%>
+                </div>
+                <div>
+                    <label class="form-label" for="description-id">Descrição: </label><%=prod.description%>
+                </div>
+                <div>
+                    <label class="form-label" for="img-id">Imagem: </label><%=prod.img%>
+                </div>
+                <div class="home-produtos-image">
+                    <img class="h-produtos-image" src="<%=prod.img%>" alt="300">
+                </div>
+            <% } %>
+            <a href="/actionChange/prod/productActionChange"><button type="submit" class="btn-btn-primary">Voltar</button></a>
+        </section>
+    </main>
+<%- include('./partials/footer') %>

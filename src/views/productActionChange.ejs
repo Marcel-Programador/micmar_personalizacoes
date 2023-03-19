@@ -1,0 +1,81 @@
+<%- include('./partials/headLogo') %>
+    <main>
+        <section>
+            <h1>Escolha uma das ações</h1>
+                <% for(let prod of pm) { %>
+                <form>
+                    <div class="table-container">
+                        <table id="tbl-01">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th class="th-hide">Tema</th>
+                                    <th class="th-hide">Categoria</th>
+                                    <th class="th-hide">Marca</th>
+                                    <th class="th-hide">Tipo</th>
+                                    <th class="th-hide">Cor</th>
+                                    <th class="th-hide">Quantidade</th>
+                                    <th class="th-hide">Preço de custo</th>
+                                    <th class="th-hide">Preço de venda</th>
+                                    <th class="th-hide">Preço promocional</th>
+                                    <th class="th-hide">Descrição</th>
+                                    <th class="th-hide">Imagem</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td>
+                                        <%= prod.id %>
+                                    </td>
+                                    <td class="th-hide">
+                                        <%= prod.theme %>
+                                    </td>
+                                    <td>
+                                        <%= prod.category %>
+                                    </td>
+                                    <td>
+                                        <%= prod.mark %>
+                                    </td>
+                                    <td>
+                                        <%= prod.type %>
+                                    </td>
+                                    <td>
+                                        <%= prod.color %>
+                                    </td>
+                                    <td>
+                                        <%= prod.quantity %>
+                                    </td>
+                                    <td>
+                                        <%= prod.costPrice %>
+                                    </td>
+                                    <td>
+                                        <%= prod.salePrice %>
+                                    </td>
+                                    <td>
+                                        <%= prod.specialPrice %>
+                                    </td>
+                                    <td>
+                                        <%= prod.description %>
+                                    </td>
+                                    <td>
+                                        <%= prod.img %>
+                                    </td>
+                                    <td class="table-actions table-img">
+                                        <a href="/show/prod/productActionChange/show/<%= prod.id %>" class="display-visible"><img src="/img/view3.png" alt=""></a>
+                                        <a href="/edit/prod/productActionChange/edit/<%= prod.id %>"><img src="/img/edit.png"></a>
+                                        <a href="/delete/prod/productActionChange/delete/<%= prod.id %>"><img src="/img/cancel.png"></a>
+
+                                        <a onclick="'<%= prod.id %>','<%= prod.theme %>','<%= prod.category %>','<%= prod.mark %>','<%= prod.type %>','<%= prod.color %>','<%= prod.quantity %>','<%= prod.costPrice %>','<%= prod.salePrice %>','<%= prod.specialPrice %>','<%= prod.description %>','<%= prod.img %>'"></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+                <% } %>
+            <a href="/adm/admPage/show"><button type="submit" class="btn-btn-primary">Voltar</button></a>
+        </section>
+    </main>
+<%- include('./partials/footer') %>

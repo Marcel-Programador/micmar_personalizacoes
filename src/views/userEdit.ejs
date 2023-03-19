@@ -1,0 +1,87 @@
+<%- include('./partials/headLogo') %>
+    <main>
+        <section>
+            <h1>Edite e atualize o Usuário</h1>
+
+            <form action="/edit/user/user/<%=userResult.id%>?_method=put" method="post" enctype="multipart/form-data">
+                <div class="Product-input">
+                    <label for="id">Id: </label><%= userResult.id %>
+                </div>
+                <div>
+                    <label class="form-label" for="firstName-id">Nome</label>
+                    <input value="<%=userResult.firstName%>" type="text" class="form-control" name="firstName" id="firstName-id" placeholder="Nome ex. 'Raul'">
+                </div>
+                <div>
+                    <label class="form-label" for="lastName-id">Sobrenome</label>
+                    <input value="<%=userResult.lastName%>" type="text" class="form-control" name="lastName" id="lastName-id" placeholder="Sobrenome ex. 'Seixas'">
+                </div>
+                <div>
+                    <label class="form-label" for="cpf-id">CPF</label>
+                    <input value="<%=userResult.cpf%>" type="text" class="form-control" name="cpf" id="cpf-id" placeholder="CPF ex. '12345678910'">
+                </div>
+                <div>
+                    <label class="form-label" for="cnpj-id">CNPJ</label>
+                    <input value="<%=userResult.cnpj%>" type="text" class="form-control" name="cnpj" id="cnpj-id" placeholder="CNPJ ex. '12345678999910'">
+                </div>
+                <div>
+                    <label class="form-label" for="email-id">E-mail</label>
+                    <input value="<%=userResult.email%>" type="text" class="form-control" name="email" id="email-id" placeholder="e-mail ex. 'teste@email.com'">
+                </div>
+                <div>
+                    <label class="form-label" for="telephone-id">Fone Fixo</label>
+                    <input value="<%=userResult.telephone%>" type="number" class="form-control" name="telephone" id="telephone-id" placeholder="Fone Fixo ex. '1234567891'">
+                </div>
+                <div>
+                    <label class="form-label" for="mobilePhone-id">Celular</label>
+                    <input value="<%=userResult.mobilePhone%>" type="text" class="form-control" name="mobilePhone" id="mobilePhone-id" placeholder="Celular ex. '12345678910'">
+                </div>
+                <div>
+                    <label class="form-label" for="professionalPhone-id">Fone trabalho</label>
+                    <input value="<%=userResult.professionalPhone%>" type="text" class="form-control" name="professionalPhone" id="professionalPhone-id" placeholder="Fone trabalho ex. '1234567891'">
+                </div>
+                <div>
+                    <label class="form-label" for="birthDate-id">Data de nascimento</label>
+                    <input value="<%=userResult.birthDate%>" type="date" class="form-control" name="birthDate" id="birthDate-id" placeholder="Data de nascimento ex. '00/00/0000'">
+                </div>
+                <div>
+                    <label class="form-label" for="genre-id">Gênero</label>
+                    <input value="<%=userResult.genre%>" type="text" class="form-control" name="genre" id="genre-id" placeholder="Gênero ex. 'Masculino, etc...'">
+                </div>
+                <div>
+                    <label class="form-label" for="addressNumber-id">Rua e numero</label>
+                    <input value="<%=userResult.addressNumber%>" type="text" class="form-control" name="addressNumber" id="addressNumber-id" placeholder="Rua e numero ex. 'Rua district'">
+                </div>
+                <div>
+                    <label class="form-label" for="district-id">Bairro</label>
+                    <input value="<%=userResult.district%>" type="text" class="form-control" name="district" id="district-id" placeholder="Bairro ex. 'São João'">
+                </div>
+                <div>
+                    <label class="form-label" for="city-id">Cidade</label>
+                    <input value="<%=userResult.city%>" type="text" class="form-control" name="city" id="city-id" placeholder="Cidade ex. 'São Bernardo'">
+                </div>
+                <div>
+                    <label class="form-label" for="state-id">Estado</label>
+                    <input value="<%=userResult.state%>" type="text" class="form-control" name="state" id="state-id" placeholder="Estado ex. 'São Paulo'">
+                </div>
+                <div>
+                    <label class="form-label" for="País-id">País</label>
+                    <input value="<%=userResult.País%>" type="text" class="form-control" name="País" id="País-id" placeholder="País ex. 'Brasil'">
+                </div>
+                <div>
+                    <label class="form-label" for="zipCode-id">CEP</label>
+                    <input value="<%=userResult.zipCode%>" type="text" class="form-control" name="zipCode" id="zipCode-id" placeholder="CEP ex. '36600000'">
+                </div>
+                <div>
+                    <label class="form-label" for="password-id">Senha</label>
+                    <input value="<%=userResult.password%>" type="text" class="form-control" name="password" id="password-id" placeholder="Senha ex. '123456'">
+                </div>
+                <div>
+                    <label class="form-label" for="img-id">Imagem</label>
+                    <input type="file" accept="image" class="form-control" name="avatar" id="img-id">
+                </div>
+                <button type="submit" class="btn-btn-primary">Atualizar</button>
+            </form>
+            <a href="/actionChange/user/userActionChange"><button type="submit" class="btn-btn-primary">Voltar</button></a>
+        </section>
+    </main>
+<%- include('./partials/footer') %>

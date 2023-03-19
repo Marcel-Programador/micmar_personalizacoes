@@ -1,0 +1,45 @@
+<%- include('./partials/headLogo') %>
+    <main>
+        <section>
+            <h1>Escolha uma das ações</h1>
+                <% for(let categ of co) { %>
+                <form>
+                    <div class="table-container">
+                        <table id="tbl-01">
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th class="th-hide">Categoria Singular</th>
+                                    <th class="th-hide">Categoria Plural</th>
+                                    <th>Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+
+                                <tr>
+                                    <td>
+                                        <%= categ.id %>
+                                    </td>
+                                    <td class="th-hide">
+                                        <%= categ.category_opt_singular %>
+                                    </td>
+                                    <td>
+                                        <%= categ.category_opt_plural %>
+                                    </td>
+                                    <td class="table-actions table-img">
+                                        <a href="/show/cat/categoryActionChange/show/<%= categ.id %>" class="display-visible"><img src="/img/view3.png" alt=""></a>
+                                        <a href="/edit/cat/categoryActionChange/edit/<%= categ.id %>"><img src="/img/edit.png"></a>
+                                        <a href="/delete/cat/categoryActionChange/delete/<%= categ.id %>"><img src="/img/cancel.png"></a>                                        
+                                        <a onclick="'<%= categ.id %>','<%= categ.category_opt_singular %>',
+                                        '<%= categ.category_opt_plural %>'"></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </form>
+                <% } %>
+            <a href="/adm/admPage/show"><button type="submit" class="btn-btn-primary">Voltar</button></a>
+        </section>
+    </main>
+<%- include('./partials/footer') %>
