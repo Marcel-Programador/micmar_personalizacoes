@@ -23,7 +23,7 @@ const ProductsPageController = {
               category_opt_plural: category_opt_plural
         }
         });
-        return res.render("productsPage", {title: "MICMAR | PAGINA DE PRODUTOS", hcl, hca, ms, pm, co});
+        return res.render("productsPage", {title: "| PAGINA DE PRODUTOS", hcl, hca, ms, pm, co});
     }
 };
 module.exports = ProductsPageController

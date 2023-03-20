@@ -22,7 +22,7 @@ const UsersEditController = {
               message: "Nenhum usuário encontrado"
             })
           }
-            return res.render("userEdit", { title: "MICMAR | EDITANDO USUÁRIO", userResult, user })
+            return res.render("userEdit", { title: "| EDITANDO USUÁRIO", userResult, user })
         },
 
     editedUser: async (req, res) => {

@@ -30,7 +30,7 @@ const ProductsDeleteController = {
               message: "Nenhum produto encontrado"
             })
           }
-            return res.render("productDelete", { title: "MICMAR | EXCLUINDO PRODUTO", productResult, pm, ms, hcl, hca, co })
+            return res.render("productDelete", { title: "| EXCLUINDO PRODUTO", productResult, pm, ms, hcl, hca, co })
         },
     
     deletedProduct: async (req, res) => {

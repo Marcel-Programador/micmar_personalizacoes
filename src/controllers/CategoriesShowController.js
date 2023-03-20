@@ -26,7 +26,7 @@ const CategoriesShowController = {
           message: "Nenhum categoria encontrada"
         })
       }
-      return res.render("categoryShow", {title: "MICMAR | MOSTRANDO CATEGORIA", categoryResult});
+      return res.render("categoryShow", {title: "| MOSTRANDO CATEGORIA", categoryResult});
     },
 };
 module.exports = CategoriesShowController

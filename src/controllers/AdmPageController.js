@@ -12,7 +12,7 @@ const AdmPageController = {
         // console.log(pm);
         let co = await CategoryOptionsModels.findAll();
         // console.log(co);
-      return res.render("admPageShow", {title: "MICMAR | ADMINISTRATIVO"});
+      return res.render("admPageShow", {title: "| ADMINISTRATIVO"});
     },
 };
 module.exports = AdmPageController

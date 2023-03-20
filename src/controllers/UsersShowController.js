@@ -20,7 +20,7 @@ const UsersShowController = {
               message: "Nenhum usuário encontrado"
             })
           }
-            return res.render("userShow", { title: "MICMAR | MOSTRANDO USUÁRIO", userResult })
+            return res.render("userShow", { title: "| MOSTRANDO USUÁRIO", userResult })
         },
 }
 

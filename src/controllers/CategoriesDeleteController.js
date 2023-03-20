@@ -30,7 +30,7 @@ const CategoriesDeleteController = {
           message: "Nenhum categoria encontrada"
         })
       }
-        return res.render("categoryDelete", { title: "MICMAR | EXCLUINDO CATEGORIA", categoryResult, pm, ms, hcl, hca, co })
+        return res.render("categoryDelete", { title: "| EXCLUINDO CATEGORIA", categoryResult, pm, ms, hcl, hca, co })
     },
 
     deletedCategory: async (req, res) => {

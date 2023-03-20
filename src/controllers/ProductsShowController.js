@@ -26,7 +26,7 @@ const ProductsShowController = {
           message: "Nenhum produto encontrado"
         })
       }
-      return res.render("productShow", {title: "MICMAR | MOSTRANDO PRODUTO", productResult});
+      return res.render("productShow", {title: "| MOSTRANDO PRODUTO", productResult});
     },
 };
 module.exports = ProductsShowController

@@ -11,7 +11,7 @@ const CategoriesRecordController = {
         let co = await CategoryOptionsModels.findOne();
         // console.log(co)
     
-        return res.render("categoryRecord", {title: "MICMAR | CADASTRO DE CATEGORIA", hcl, hca, co});
+        return res.render("categoryRecord", {title: "| CADASTRO DE CATEGORIA", hcl, hca, co});
     },
     recordedCategory: async (req, res) => {
         const {category_opt_singular, category_opt_plural} = req.body;

@@ -30,7 +30,7 @@ const ProductsEditController = {
               message: "Nenhum produto encontrado"
             })
           }
-            return res.render("productEdit", { title: "MICMAR | EDITANDO PRODUTO", productResult, pm, ms, hcl, hca, co })
+            return res.render("productEdit", { title: "| EDITANDO PRODUTO", productResult, pm, ms, hcl, hca, co })
         },
     
     editedProduct: async (req, res) => {

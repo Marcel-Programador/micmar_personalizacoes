@@ -11,7 +11,7 @@ const UsersRecordController = {
         let user = await UsersModels.findOne();
         // console.log(user)
     
-        return res.render("userRecord", {title: "MICMAR | CADASTRO DE USUÁRIOS", hcl, hca, user});
+        return res.render("userRecord", {title: "| CADASTRO DE USUÁRIOS", hcl, hca, user});
     },
     recordedUser: async (req, res) => {
         const isAdmin = 0;

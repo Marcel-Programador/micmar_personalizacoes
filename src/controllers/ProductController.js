@@ -16,7 +16,7 @@ const ProductController = {
               id: id,
             }
           });
-        return res.render("product", {title: "MICMAR | PAGINA DO PRODUTO", hcl, hca, ms, pm, co});
+        return res.render("product", {title: "| PAGINA DO PRODUTO", hcl, hca, ms, pm, co});
     }
 };
 module.exports = ProductController

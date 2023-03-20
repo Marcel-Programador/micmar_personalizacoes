@@ -11,7 +11,7 @@ const CategoriesActionChangeController = {
         // console.log(hca);
         let co = await CategoryOptionsModels.findAll();
         // console.log(hca);
-        return res.render("categoryActionChange", {title: "MICMAR | ALTERAR CATEGORIAS", hcl, hca, co});
+        return res.render("categoryActionChange", {title: "| ALTERAR CATEGORIAS", hcl, hca, co});
     },
 }
 module.exports = CategoriesActionChangeController

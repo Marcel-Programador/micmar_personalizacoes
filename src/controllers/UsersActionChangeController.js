@@ -12,7 +12,7 @@ const UsersActionChangeController = {
         let user = await UsersModels.findAll();
         // console.log(user)
     
-        return res.render("userActionChange", {title: "MICMAR | ALTERAR USUÁRIOS", hcl, hca, user});
+        return res.render("userActionChange", {title: "| ALTERAR USUÁRIOS", hcl, hca, user});
     },
 }
 module.exports = UsersActionChangeController

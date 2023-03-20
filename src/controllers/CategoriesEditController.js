@@ -31,7 +31,7 @@ const CategoriesEditController = {
           message: "Nenhum categoria encontrada"
         })
       }
-        return res.render("categoryEdit", { title: "MICMAR | EDITANDO CATEGORIA", categoryResult, pm, ms, hcl, hca, co })
+        return res.render("categoryEdit", { title: "| EDITANDO CATEGORIA", categoryResult, pm, ms, hcl, hca, co })
     },
 
     editedCategory: async (req, res) => {

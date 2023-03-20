@@ -22,7 +22,7 @@ const UsersDeleteController = {
               message: "Nenhum usuário encontrada"
             })
           }
-            return res.render("userDelete", { title: "MICMAR | EXCLUINDO USUÁRIO", userResult, user })
+            return res.render("userDelete", { title: "| EXCLUINDO USUÁRIO", userResult, user })
         },
 
     deletedUser: async (req, res) => {

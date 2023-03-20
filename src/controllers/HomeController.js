@@ -12,7 +12,7 @@ const HomeController = {
         // console.log(pm);
         let co = await CategoryOptionsModels.findAll();
         // console.log(co);
-        return res.render("homePage", {title: "MICMAR | HOME", hcl, hca, ms, pm, co});
+        return res.render("homePage", {title: "| HOME", hcl, hca, ms, pm, co});
     }
 };
 module.exports = HomeController

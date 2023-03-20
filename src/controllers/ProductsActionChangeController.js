@@ -10,7 +10,7 @@ const ProductsActionChangeController = {
         // console.log(hca);
         let pm = await ProductsModels.findAll();
         // console.log(hca);
-        return res.render("productActionChange", {title: "MICMAR | ALTERAR PRODUTOS", hcl, hca, pm});
+        return res.render("productActionChange", {title: "| ALTERAR PRODUTOS", hcl, hca, pm});
     },
 }
 module.exports = ProductsActionChangeController

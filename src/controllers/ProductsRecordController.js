@@ -10,7 +10,7 @@ const ProductsRecordController = {
         // console.log(hca);
         let pm = await ProductsModels.findAll();
         // console.log(hca);
-        return res.render("productRecord", {title: "MICMAR | CADASTRO DE PRODUTO", hcl, hca, pm});
+        return res.render("productRecord", {title: "| CADASTRO DE PRODUTO", hcl, hca, pm});
     },
     recordedProduct: async (req, res) => {
         const { category, theme, mark, type, color, quantity, costPrice, salePrice, specialPrice, description } = req.body;
