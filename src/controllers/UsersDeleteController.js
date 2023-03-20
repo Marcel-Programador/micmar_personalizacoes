@@ -28,7 +28,7 @@ const UsersDeleteController = {
     deletedUser: async (req, res) => {
 
         const isAdmin = 0;
-        const { firstName, lastName, cpf, cnpj, email, telephone, mobilePhone, professionalPhone, birthDate, genre, addressNumber, district, city, state, country, zipCode, password } = req.body;
+        const { firstName, lastName, cpf, cnpj, email, telephone, mobilePhone, professionalPhone, birthDate, genre, address, number, district, city, state, country, zipCode, password } = req.body;
 
         let filename = "shoes-defaut.png";
 

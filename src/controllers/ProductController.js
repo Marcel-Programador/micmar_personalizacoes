@@ -1,7 +1,7 @@
 const { HomehclModels, HomehcaModels, MainSectionModels, ProductsModels, CategoryOptionsModels } = require("../models");
 
 const ProductController = {
-    product: async(req, res) => {
+    productShow: async(req, res) => {
         let hcl = await HomehclModels.findOne();
         // console.log(hcl);
         let hca = await HomehcaModels.findOne();

@@ -29,7 +29,7 @@ const UsersEditController = {
 
 
         const isAdmin = 0;
-        const { firstName, lastName, cpf, cnpj, email, telephone, mobilePhone, professionalPhone, birthDate, genre, addressNumber, district, city, state, country, zipCode, password } = req.body;
+        const { firstName, lastName, cpf, cnpj, email, telephone, mobilePhone, professionalPhone, birthDate, genre, address, number, district, city, state, country, zipCode, password } = req.body;
 
         let filename = "shoes-defaut.png";
 
@@ -56,7 +56,8 @@ const UsersEditController = {
                 cnpj: cnpj,
                 telephone: telephone,
                 professionalPhone: professionalPhone,
-                addressNumber: addressNumber,
+                address: address,
+                number: number,
                 district: district,
                 city: city,
                 state: state,

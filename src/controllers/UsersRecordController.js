@@ -15,14 +15,14 @@ const UsersRecordController = {
     },
     recordedUser: async (req, res) => {
         const isAdmin = 0;
-        const { firstName, lastName, cpf, cnpj, email, telephone, mobilePhone, professionalPhone, birthDate, genre, addressNumber, district, city, state, country, zipCode, password } = req.body;
+        const { firstName, lastName, cpf, cnpj, email, telephone, mobilePhone, professionalPhone, birthDate, genre, address, number, district, city, state, country, zipCode, password } = req.body;
         let filename = "shoes-defaut.png";
 
         if (req.file) {
           filename = req.file.filename
         }
 
-        if ( !firstName || !lastName || !cpf || !email || !mobilePhone || !birthDate || !genre || !addressNumber || !district || !city || !state || !country || !zipCode || !password ){
+        if ( !firstName || !lastName || !cpf || !email || !mobilePhone || !birthDate || !genre || !address || !number || !district || !city || !state || !country || !zipCode || !password ){
             return res.send({message: "Se chegou aqui é porque esqueceu de cadastrar alguma informação do usuário"})
         }
     try {
@@ -38,7 +38,8 @@ const UsersRecordController = {
             birthDate,
             genre,
             password,
-            addressNumber,
+            address,
+            number,
             district,
             city,
             state,
