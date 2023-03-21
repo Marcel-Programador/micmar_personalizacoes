@@ -14,6 +14,7 @@ const CategoriesRecordController = {
         return res.render("categoryRecord", {title: "| CADASTRO DE CATEGORIA", hcl, hca, co});
     },
     recordedCategory: async (req, res) => {
+        const { id } = req.params;
         const {category_opt_singular, category_opt_plural} = req.body;
         // console.log(category_opt_singular, category_opt_plural)
 
