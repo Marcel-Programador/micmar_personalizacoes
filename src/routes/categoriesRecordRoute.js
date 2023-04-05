@@ -17,6 +17,6 @@ const multerDiskStorage = multer.diskStorage({
 const upload = multer({storage: multerDiskStorage});
 
 router.get("/category", CategoriesRecordController.viewCategory);
-router.post("/recorded", CategoriesRecordController.recordedCategory);
+router.post("/recorded/", CategoriesRecordController.recordedCategory);
 
 module.exports = router;

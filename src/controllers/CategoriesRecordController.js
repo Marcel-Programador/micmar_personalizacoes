@@ -27,7 +27,7 @@ const CategoriesRecordController = {
             category_opt_plural: category_opt_plural
         });
 
-        return res.send({ Recorded: categoryOptions }).status(200);
+        return res.render("categoryShowRecorded", {title: "| CATEGORIA GRAVADA"});
 
     } catch (error) {
             return res.send({ message: "erro: " + error});
