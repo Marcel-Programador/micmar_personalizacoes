@@ -37,8 +37,7 @@ const ProductsRecordController = {
             description: description,
             img: filename
         })
-
-        return res.send({Recorded: product}).status(200);
+        return res.render("ProductShowRecorded", {title: "| PRODUTO GRAVADO"});
 
         } catch (error) {
             return res.send({message: "erro" + error})

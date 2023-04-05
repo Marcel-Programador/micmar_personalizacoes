@@ -49,8 +49,7 @@ const UsersRecordController = {
             isAdmin,
         })
 
-
-        return res.send({Recorded: user}).status(200);
+        return res.render("userShowRecorded", {title: "| USUARIO GRAVADO"});
 
         } catch (error) {
             return res.send({message: "erro" + error})
