@@ -16,7 +16,7 @@ const ProductController = {
               id: id,
             }
           });
-        return res.render("product", {title: "| PAGINA DO PRODUTO", hcl, hca, ms, pm, co});
+        return res.render("product", {title: "| PAGINA DO PRODUTO", ms, pm, co, hcl});
     }
 };
 module.exports = ProductController

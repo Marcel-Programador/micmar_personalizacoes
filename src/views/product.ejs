@@ -8,14 +8,14 @@
                 </h1>
             </span>
             <div id="container-home-produtos-product">
-                <% for(let prod of pm) { %>
+                <% for(let product of pm) { %>
                 <div class="home-produtos-product">
-                    <h3><%=prod.category%></h3>
+                    <h3><%=product.category%></h3>
                     <h2><%=title.title_impact_3%></h2>
-                    <span><strong>de </strong>R$:<%=prod.salePrice%> Por R$:<%=prod.specialPrice%></span>
+                    <span><strong>de </strong>R$:<%=product.salePrice%> Por R$:<%=product.specialPrice%></span>
 
                     <div class="home-produtos-image-product">
-                        <img class="h-produtos-image-product" src="<%=prod.img%>" alt="">
+                        <img class="h-produtos-image" src="<%=product.img%>" alt="">
                     </div>
                 </div>
                 <% } %>
